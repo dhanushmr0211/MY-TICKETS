@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">....</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Events
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Concert</a></li>
+            <li><a class="dropdown-item" href="#">Sports Event</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Movie</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">My Bookings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled Link</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" method="GET" action="https://www.google.com/search" target="_blank">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-dark text-light text-center p-5">
+  <h1>Book Your Tickets Now 🎟️</h1>
+  <p class="lead">Movies, Concerts, Sports — All in one place</p>
+  <form class="d-flex justify-content-center mt-3" role="search" action="https://www.google.com/search" method="GET">
+    <input class="form-control w-50 me-2" type="search" name="q" placeholder="Search events..." aria-label="Search">
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+</section>
+
+<!-- New Arrivals -->
+<section class="container my-5">
+  <h2 class="mb-4">🆕 New Arrivals</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="sufromso.jpg" class="card-img-top" alt="New Movie">
+        <div class="card-body">
+          <h5 class="card-title" >SU from SO</h5>
+          <p class="card-text">Catch the latest  Kannada blockbuster now!</p>
+          <a href="booking.html?title=SU from SO&price=250" class="btn btn-primary">Book Now</a>
+          <button class="btn btn-danger" onclick="window.open('https://maps.app.goo.gl/hKbUNwm8jQr2Nyfv9', '_blank')">
+  Location
+</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="shreya.jpeg" class="card-img-top" alt="Concert">
+        <div class="card-body" style="box-shadow: #0d6efd 5px 5px 10px -5px;">
+          <h5 class="card-title">Shreya's Concert</h5>
+          <p class="card-text">Experience the music live.</p>
+          <a href="booking.html?title=Shreya's Concert&price=500" class="btn btn-primary">Book Now</a>
+          <button class="btn btn-danger" onclick="window.open('https://maps.app.goo.gl/hKbUNwm8jQr2Nyfv9', '_blank')">
+  Location
+</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="lord;s.jpg" class="card-img-top" alt="Sports Match">
+        <div class="card-body">
+          <h5 class="card-title">Lords Match</h5>
+          <p class="card-text">Don’t miss the action!</p>
+          <a href="booking.html?title=Lords Match&price=350" class="btn btn-primary">Book Now</a>
+          <button class="btn btn-danger" onclick="window.open('https://maps.app.goo.gl/hKbUNwm8jQr2Nyfv9', '_blank')">
+  Location
+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ending Soon -->
+<section class="container my-5">
+  <h2 class="mb-4">⏳ Ending Soon</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="alert alert-danger d-flex justify-content-between align-items-center">
+        <span>⚡ Movie: “Fast & Furious” — Last Few Seats!</span>
+        <a href="booking.html?title=Fast And Furious&price=300" class="btn btn-sm btn-dark">Book Now</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="alert alert-warning d-flex justify-content-between align-items-center">
+        <span>⚡ Concert: “Live Rock Night” — Closing Soon!</span>
+        <a href="booking.html?title=Live Rock Night&price=300" class="btn btn-sm btn-dark">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Offers -->
+<section class="container my-5">
+  <h2 class="mb-4">💸 Special Offers</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card border-success">
+        <div class="card-body">
+          <h5 class="card-title">🎬 Movie Offer</h5>
+          <p class="card-text">Get 20% OFF on first booking!</p>
+          <a href="offers.html" class="btn btn-success">Grab Offer</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-success">
+        <div class="card-body">
+          <h5 class="card-title">🎵 Concert Deal</h5>
+          <p class="card-text">Buy 1 Get 1 Free this weekend!</p>
+          <a href="offers.html" class="btn btn-success">Grab Offer</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-success">
+        <div class="card-body">
+          <h5 class="card-title">⚽ Sports Pass</h5>
+          <p class="card-text">Flat ₹200 OFF on stadium tickets</p>
+          <a href="offers.html" class="btn btn-success">Grab Offer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
