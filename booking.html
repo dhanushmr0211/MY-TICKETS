@@ -30,6 +30,42 @@
       updateTotal();
     };
   </script>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+window.onload = function () {
+  let params = getQueryParams();
+  document.getElementById("eventTitle").textContent = params.title;
+  document.getElementById("price").textContent = params.price;
+  updateTotal();
+
+  // Save image too (from URL param)
+  let image = new URLSearchParams(window.location.search).get("image") || "default.jpg";
+
+  document.getElementById("confirm-booking").onclick = function (e) {
+    let total = parseInt(document.getElementById("total").textContent); 
+    let title = document.getElementById("eventTitle").textContent;
+
+    var options = {
+      "key": "rzp_test_RD9NppJFgIFzff",  
+      "amount": total * 100, // in paise
+      "currency": "INR",
+      "name": title,   // ✅ Now event name is dynamic
+      "description": "Ticket Payment",
+      "handler": function (response) {
+        window.location.href = `thankyou.html?payment_id=${response.razorpay_payment_id}&title=${encodeURIComponent(title)}&amount=${total}&image=${encodeURIComponent(image)}`;
+      }
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+    e.preventDefault();
+  }
+};
+</script>
+
+
+
 </head>
 <body class="bg-light">
 
@@ -47,9 +83,12 @@
 
     <p><strong>Total Price:</strong> ₹<span id="total"></span></p>
 
-    <button class="btn btn-success w-100">Confirm Booking</button>
+    <button id="confirm-booking" class="btn btn-success w-100">Confirm Booking</button>
+
   </div>
 </div>
 
+
+  
 </body>
 </html>
