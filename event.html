@@ -6,13 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="event.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+     </body>
     
-</head>
-<body>
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">....</a>
+    <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,24 +24,21 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Events
+            Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Concert</a></li>
-            <li><a class="dropdown-item" href="#">Sports Event</a></li>
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Movie</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">My Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled Link</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex" role="search" method="GET" action="https://www.google.com/search" target="_blank">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" />
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
@@ -163,10 +158,50 @@
 
 
 
+<footer class="bg-dark text-light mt-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>About MY TICKETS</h5>
+            <p class="small">Simple, fast ticket booking for movies, concerts and sports. Secure payments and instant confirmation.</p>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled small">
+              <li><a href="event.html" class="text-decoration-none text-light">Home</a></li>
+              <li><a href="offers.html" class="text-decoration-none text-light">Offers</a></li>
+              <li><a href="booking.html" class="text-decoration-none text-light">My Bookings</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <h5>Contact</h5>
+            <p class="small mb-1">support@mytickets.example</p>
+            <p class="small">+91 63628 78867</p>
+            <div class="mt-2">
+              <a href="#" class="btn btn-outline-light btn-sm me-1" aria-label="Twitter">T</a>
+              <a href="#" class="btn btn-outline-light btn-sm me-1" aria-label="Facebook">F</a>
+              <a href="#" class="btn btn-outline-light btn-sm" aria-label="Instagram">I</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-black bg-opacity-25 text-center py-3">
+        <div class="container small">&copy; <span id="year"></span> MY TICKETS — All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script>
+      // set copyright year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
 
 
 
 
 </body>
+</html>
 </html>
